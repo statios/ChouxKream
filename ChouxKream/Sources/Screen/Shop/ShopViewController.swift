@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  ShopViewController.swift
 //  ChouxKream
 //
 //  Created by stat on 2023/01/30.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-class HomeViewController: CKRViewController {
+class ShopViewController: CKRViewController {
     
     override var title: String? {
-        get { "HOME" }
+        get { "SHOP" }
         set { }
     }
     

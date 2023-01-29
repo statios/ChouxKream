@@ -15,6 +15,10 @@
 		F959D5552986D5BF006CAC08 /* CKRPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5542986D5BF006CAC08 /* CKRPageController.swift */; };
 		F959D5572986D5F2006CAC08 /* CKRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5562986D5F2006CAC08 /* CKRNavigationController.swift */; };
 		F959D55B2986D616006CAC08 /* CKRTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D55A2986D616006CAC08 /* CKRTabBarController.swift */; };
+		F959D55F2986DAAB006CAC08 /* ShopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F959D55E2986DAAB006CAC08 /* ShopViewController.storyboard */; };
+		F959D5612986DAB4006CAC08 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5602986DAB4006CAC08 /* ShopViewController.swift */; };
+		F959D5632986DABD006CAC08 /* StyleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F959D5622986DABD006CAC08 /* StyleViewController.storyboard */; };
+		F959D5652986DAC4006CAC08 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5642986DAC4006CAC08 /* StyleViewController.swift */; };
 		F9D5C5522986C13A0026EEDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5C5512986C13A0026EEDC /* AppDelegate.swift */; };
 		F9D5C5542986C13A0026EEDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5C5532986C13A0026EEDC /* SceneDelegate.swift */; };
 		F9D5C55B2986C13B0026EEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D5C55A2986C13B0026EEDC /* Assets.xcassets */; };
@@ -30,6 +34,10 @@
 		F959D5542986D5BF006CAC08 /* CKRPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRPageController.swift; sourceTree = "<group>"; };
 		F959D5562986D5F2006CAC08 /* CKRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRNavigationController.swift; sourceTree = "<group>"; };
 		F959D55A2986D616006CAC08 /* CKRTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRTabBarController.swift; sourceTree = "<group>"; };
+		F959D55E2986DAAB006CAC08 /* ShopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopViewController.storyboard; sourceTree = "<group>"; };
+		F959D5602986DAB4006CAC08 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		F959D5622986DABD006CAC08 /* StyleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StyleViewController.storyboard; sourceTree = "<group>"; };
+		F959D5642986DAC4006CAC08 /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
 		F9D5C54E2986C13A0026EEDC /* ChouxKream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChouxKream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D5C5512986C13A0026EEDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9D5C5532986C13A0026EEDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +92,24 @@
 				F959D5502986D50D006CAC08 /* CKRCollectionController.swift */,
 			);
 			path = Content;
+			sourceTree = "<group>";
+		};
+		F959D55C2986DA90006CAC08 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				F959D5622986DABD006CAC08 /* StyleViewController.storyboard */,
+				F959D5642986DAC4006CAC08 /* StyleViewController.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		F959D55D2986DA95006CAC08 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				F959D55E2986DAAB006CAC08 /* ShopViewController.storyboard */,
+				F959D5602986DAB4006CAC08 /* ShopViewController.swift */,
+			);
+			path = Shop;
 			sourceTree = "<group>";
 		};
 		F9D5C5452986C13A0026EEDC = {
@@ -145,6 +171,8 @@
 			children = (
 				F959D54D2986D4EA006CAC08 /* Template */,
 				F959D5482986D3FD006CAC08 /* Home */,
+				F959D55C2986DA90006CAC08 /* Style */,
+				F959D55D2986DA95006CAC08 /* Shop */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -207,7 +235,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F959D5632986DABD006CAC08 /* StyleViewController.storyboard in Resources */,
 				F959D54A2986D407006CAC08 /* HomeViewController.storyboard in Resources */,
+				F959D55F2986DAAB006CAC08 /* ShopViewController.storyboard in Resources */,
 				F9D5C55E2986C13B0026EEDC /* LaunchScreen.storyboard in Resources */,
 				F9D5C55B2986C13B0026EEDC /* Assets.xcassets in Resources */,
 			);
@@ -222,12 +252,14 @@
 			files = (
 				F959D5572986D5F2006CAC08 /* CKRNavigationController.swift in Sources */,
 				F9D5C5522986C13A0026EEDC /* AppDelegate.swift in Sources */,
+				F959D5612986DAB4006CAC08 /* ShopViewController.swift in Sources */,
 				F959D5552986D5BF006CAC08 /* CKRPageController.swift in Sources */,
 				F959D55B2986D616006CAC08 /* CKRTabBarController.swift in Sources */,
 				F959D5532986D57F006CAC08 /* AppNavigator.swift in Sources */,
 				F9D5C5542986C13A0026EEDC /* SceneDelegate.swift in Sources */,
 				F959D54C2986D40E006CAC08 /* HomeViewController.swift in Sources */,
 				F959D5512986D50D006CAC08 /* CKRCollectionController.swift in Sources */,
+				F959D5652986DAC4006CAC08 /* StyleViewController.swift in Sources */,
 				F959D54F2986D505006CAC08 /* CKRViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

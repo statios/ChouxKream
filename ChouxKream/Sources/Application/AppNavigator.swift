@@ -11,10 +11,15 @@ struct AppNavigator {
     
     static func launch(from window: UIWindow?) {
         
-        let home = HomeViewController.default()
-        
         let main = CKRTabBarController()
-        main.setViewControllers([CKRNavigationController(rootViewController: home)], animated: false)
+        main.setViewControllers(
+            [
+                CKRNavigationController(rootViewController: HomeViewController.default()),
+                CKRNavigationController(rootViewController: StyleViewController.default()),
+                CKRNavigationController(rootViewController: ShopViewController.default())
+            ],
+            animated: false
+        )
         
         window?.rootViewController = main
         window?.makeKeyAndVisible()
