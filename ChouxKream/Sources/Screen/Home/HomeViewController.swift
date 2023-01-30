@@ -14,4 +14,16 @@ class HomeViewController: CKRViewController {
         set { }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .random
+    }
+    
+}
+
+extension UIColor {
+    class var random: UIColor {
+        UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
+    }
 }

@@ -59,4 +59,40 @@ class CKRViewController: UIViewController {
         }
     }
     
+    func attachContent(viewController: UIViewController, container: UIView) {
+        
+        guard !children.contains(viewController) else { return }
+        
+        addChild(viewController)
+        viewController.willMove(toParent: self)
+        defer { viewController.didMove(toParent: self) }
+        
+        viewController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        container.addSubview(viewController.view)
+        
+        NSLayoutConstraint.activate([
+            viewController.view.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+            viewController.view.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+            viewController.view.topAnchor.constraint(equalTo: container.topAnchor),
+            viewController.view.bottomAnchor.constraint(equalTo: container.bottomAnchor)
+        ])
+    }
+    
+    func detachContent(viewController: UIViewController) {
+        
+        guard children.contains(viewController) else { return }
+        
+        viewController.willMove(toParent: nil)
+        
+        viewController.view.removeFromSuperview()
+        
+        viewController.didMove(toParent: nil)
+        viewController.removeFromParent()
+    }
+    
+}
+
+extension UIViewController: CKRPageBarItem {
+    
 }

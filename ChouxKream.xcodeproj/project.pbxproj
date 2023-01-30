@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9432CA329881BDA00CFFC60 /* CKPageBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9432CA229881BDA00CFFC60 /* CKPageBarLayout.swift */; };
+		F9432CA529881BF700CFFC60 /* CKPageBarPlainLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9432CA429881BF700CFFC60 /* CKPageBarPlainLayout.swift */; };
 		F959D54A2986D407006CAC08 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F959D5492986D407006CAC08 /* HomeViewController.storyboard */; };
 		F959D54C2986D40E006CAC08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D54B2986D40E006CAC08 /* HomeViewController.swift */; };
 		F959D54F2986D505006CAC08 /* CKRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D54E2986D505006CAC08 /* CKRViewController.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F9432CA229881BDA00CFFC60 /* CKPageBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CKPageBarLayout.swift; path = ../../../../../../../../../../Desktop/CKPageBarLayout.swift; sourceTree = "<group>"; };
+		F9432CA429881BF700CFFC60 /* CKPageBarPlainLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKPageBarPlainLayout.swift; sourceTree = "<group>"; };
 		F959D5492986D407006CAC08 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		F959D54B2986D40E006CAC08 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F959D54E2986D505006CAC08 /* CKRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F9432CA029881BBB00CFFC60 /* CKRPageController */ = {
+			isa = PBXGroup;
+			children = (
+				F959D5542986D5BF006CAC08 /* CKRPageController.swift */,
+				F9432CA129881BC700CFFC60 /* CKPageBarLayout */,
+			);
+			path = CKRPageController;
+			sourceTree = "<group>";
+		};
+		F9432CA129881BC700CFFC60 /* CKPageBarLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F9432CA229881BDA00CFFC60 /* CKPageBarLayout.swift */,
+				F9432CA429881BF700CFFC60 /* CKPageBarPlainLayout.swift */,
+			);
+			path = CKPageBarLayout;
+			sourceTree = "<group>";
+		};
 		F959D5482986D3FD006CAC08 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				F959D5562986D5F2006CAC08 /* CKRNavigationController.swift */,
-				F959D5542986D5BF006CAC08 /* CKRPageController.swift */,
+				F9432CA029881BBB00CFFC60 /* CKRPageController */,
 				F959D55A2986D616006CAC08 /* CKRTabBarController.swift */,
 			);
 			path = Container;
@@ -251,7 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F959D5572986D5F2006CAC08 /* CKRNavigationController.swift in Sources */,
+				F9432CA529881BF700CFFC60 /* CKPageBarPlainLayout.swift in Sources */,
 				F9D5C5522986C13A0026EEDC /* AppDelegate.swift in Sources */,
+				F9432CA329881BDA00CFFC60 /* CKPageBarLayout.swift in Sources */,
 				F959D5612986DAB4006CAC08 /* ShopViewController.swift in Sources */,
 				F959D5552986D5BF006CAC08 /* CKRPageController.swift in Sources */,
 				F959D55B2986D616006CAC08 /* CKRTabBarController.swift in Sources */,
