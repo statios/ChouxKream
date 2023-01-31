@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class CKRViewController: UIViewController {
+    
+    lazy var disposeBag = DisposeBag()
     
     class var storyboardName: String {
         return String(describing: Self.self)

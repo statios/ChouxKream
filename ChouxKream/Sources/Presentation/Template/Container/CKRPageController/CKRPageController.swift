@@ -36,16 +36,35 @@ class CKRPageViewController: CKRViewController {
             pageContainer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
-        if let pageBarLayout {
-            pageBarLayout.pageBarLayout(environment: view)
-            pageBarLayout.pageBarLayoutDataSource(viewControllers)
-            additionalSafeAreaInsets = pageBarLayout.pageBarLayoutAdditionalSafeAreaInsets()
-        }
-        
         if let viewController = viewControllers.first {
             pageViewController = createPageViewController()
             pageViewController.setViewControllers([viewController], direction: .forward, animated: false)
             attachContent(viewController: pageViewController, container: pageContainer)
+            
+            if let pageBarLayout {
+                pageBarLayout.pageBarLayout(environment: view)
+                pageBarLayout.pageBarLayoutDataSource(viewControllers)
+                pageBarLayout.pageBarLayoutDidFinishTransition(index: .zero)
+                pageBarLayout.pageBarLayoutDidSelectItem { [weak self] index in
+                    guard let self else { return }
+                    
+                    if let current = self.pageViewController.viewControllers?.first,
+                       let currentIndex = self.viewControllers.firstIndex(of: current), currentIndex != index {
+                        
+                        var isForward = currentIndex < index
+                        
+                        let isEndToStart = currentIndex == .zero && index == self.viewControllers.count-1
+                        if isEndToStart { isForward = false }
+                    
+                        let isStartToEnd = currentIndex == self.viewControllers.count-1 && index == .zero
+                        if isStartToEnd { isForward = true }
+                        
+                        let viewController = self.viewControllers[index]
+                        self.pageViewController.setViewControllers([viewController], direction: isForward ? .forward : .reverse, animated: true)
+                    }
+                }
+                additionalSafeAreaInsets = pageBarLayout.pageBarLayoutAdditionalSafeAreaInsets()
+            }
         }
     }
     
@@ -95,7 +114,7 @@ extension CKRPageViewController: UIPageViewControllerDelegate {
             let viewController = pageViewController.viewControllers?.first,
             let index = viewControllers.firstIndex(of: viewController) {
             
-            pageBarLayout?.pageBarLayoutDidFinishTransition(viewController, index: index)
+            pageBarLayout?.pageBarLayoutDidFinishTransition(index: index)
         }
     }
     

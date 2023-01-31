@@ -9,6 +9,8 @@ import UIKit
 
 class CKRPageBarPlainLayout: UIStackView, CKRPageBarLayout {
     
+    private var didSelectItemHandler: ((Int) -> Void)?
+    
     private var barHeight: CGFloat {
         return 44
     }
@@ -33,14 +35,22 @@ class CKRPageBarPlainLayout: UIStackView, CKRPageBarLayout {
     }
     
     func pageBarLayoutDataSource(_ items: [CKRPageBarItem]) {
+        
         addSpacer()
-        items.forEach { item in
-            addArrangedSubview(PlainPageBarItem().setup(item.title))
+        
+        items.enumerated().forEach { index, item in
+            let barItem = PlainPageBarItem().setup(item.title)
+            barItem.addAction(.init(handler: { [weak self] _ in
+                self?.didSelectItemHandler?(index)
+                self?.pageBarLayoutDidFinishTransition(index: index)
+            }), for: .touchUpInside)
+            addArrangedSubview(barItem)
         }
+        
         addSpacer()
     }
     
-    func pageBarLayoutDidFinishTransition(_ item: CKRPageBarItem, index: Int) {
+    func pageBarLayoutDidFinishTransition(index: Int) {
         arrangedSubviews.enumerated().forEach { offset, subview in
             if let control = subview as? UIControl {
                 control.isSelected = offset == index + 1
@@ -48,9 +58,17 @@ class CKRPageBarPlainLayout: UIStackView, CKRPageBarLayout {
         }
     }
     
+    func pageBarLayoutDidSelectItem(handler: @escaping (Int) -> Void) {
+        self.didSelectItemHandler = handler
+    }
+    
     private func setup() {
         backgroundColor = .systemBackground
         spacing = 16
+        
+        let separator = UIView()
+        separator.backgroundColor = .separator
+        separator.translatesAutoresizingMaskIntoConstraints = false
     }
     
 }
@@ -99,7 +117,7 @@ private class PlainPageBarItem: UIControl {
     
     private func update() {
         selection.isHidden = !isSelected
-        label.font = .systemFont(ofSize: 14, weight: isSelected ? .semibold : .regular)
+        label.font = .systemFont(ofSize: 13, weight: isSelected ? .semibold : .regular)
     }
     
 }
@@ -108,7 +126,6 @@ fileprivate extension UIStackView {
     func addSpacer() {
         let spacer = UIView(frame: .zero)
         spacer.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        spacer.backgroundColor = .red
         addArrangedSubview(spacer)
     }
 }
