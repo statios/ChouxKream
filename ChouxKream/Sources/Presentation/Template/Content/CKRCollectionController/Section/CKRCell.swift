@@ -7,8 +7,7 @@
 
 import UIKit
 
-class CKRCell: UICollectionViewCell {
-    func configure(item: AnyHashable) {
-        
-    }
+protocol CKRCell {
+    associatedtype Item: Identifiable
+    func configure(item: Item)
 }

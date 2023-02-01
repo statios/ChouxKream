@@ -7,41 +7,47 @@
 
 import UIKit
 
-class CKRSection {
+//struct AnySection: Hashable {
+//    
+//    var base: Any
+//    
+//    init<SectionType>(_ base: SectionType) where SectionType: CKRSection {
+//        self.base = base
+//    }
+//    
+//    static func == (lhs: AnySection, rhs: AnySection) -> Bool {
+//        
+//    }
+//    
+//}
+
+protocol CKRSection: Hashable, Comparable {
+    associatedtype Cell: CKRCell
     
-    var id: String = UUID().uuidString
+    var id: String { get }
+    var priority: CKRSectionPriority { get }
+    var itemStore: [Cell.Item.ID: Cell.Item] { get }
     
-    var priority: CKRSectionPriority = .required
-    
-    var layout: NSCollectionLayoutSection {
-        .plain
-    }
-    
-    var itemStore: [AnyHashable]
-    
-    init(items: [AnyHashable]) {
-        self.itemStore = items
-    }
-    
-    var cellType: CKRCell.Type {
-        return CKRCell.self
-    }
-    
+    func layout(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection
 }
 
-extension CKRSection: Hashable {
+// MARK: - Hashable
+
+extension CKRSection {
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
 }
 
-extension CKRSection: Comparable {
+// MARK: - Comparable
+
+extension CKRSection {
     
-    static func < (lhs: CKRSection, rhs: CKRSection) -> Bool {
+    static func < (lhs: Self, rhs: Self) -> Bool {
         return lhs.priority.rawValue > rhs.priority.rawValue
     }
     
-    static func == (lhs: CKRSection, rhs: CKRSection) -> Bool {
+    static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.id == rhs.id
     }
     

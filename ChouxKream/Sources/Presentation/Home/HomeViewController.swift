@@ -9,7 +9,8 @@ import UIKit
 
 class HomeViewController: CKRCollectionController {
     
-    private let rollingBannerRepository = RollingBannerRepository()
+    private let quickButtonRepository: CKRRepository = QuickButtonRepository()
+    private let recommendBrandRepository: CKRRepository = RecommendBrandRepository()
     
     override var title: String? {
         get { "추천" }
@@ -21,9 +22,17 @@ class HomeViewController: CKRCollectionController {
         
         view.backgroundColor = .random
         
-        rollingBannerRepository.fetchAll()
-            .map { RollingBannerSection(items: [$0]) }
-            .asObservable()
+        quickButtonRepository.listen()
+            .map { quickButtons in
+                QuickButtonSection()
+            }
+            .bind(to: rxSection)
+            .disposed(by: disposeBag)
+        
+        recommendBrandRepository.listen()
+            .map { recommendBrands in
+                QuickButtonSection()
+            }
             .bind(to: rxSection)
             .disposed(by: disposeBag)
     }
