@@ -23,7 +23,7 @@ class CKRCollectionController: CKRViewController {
     
     open var rxSection = PublishRelay<any CKRSection>()
     
-    private var sectionStore: [any CKRSection] = []
+    private(set) var sectionStore: [any CKRSection] = []
     
     private var layoutConfiguration = UICollectionViewCompositionalLayoutConfiguration()
     
@@ -37,18 +37,20 @@ class CKRCollectionController: CKRViewController {
         }, configuration: layoutConfiguration)
         
         collectionViewDataSource = .init(collectionView: collectionView) { [unowned self] collectionView, indexPath, itemIdentifier in
-//            let reuseIdentifier = self.sectionStore[indexPath.section].cellType.reuseIdentifier
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-//            if let cell = cell as? CKRCell { cell.configure(item: itemIdentifier) }
-//            return cell
-            nil
+            let section = self.sectionStore[indexPath.section]
+            let reuseIdentifier = section.cellReuseIdentifier
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CKRCell<Any>
+            cell?.configure(item: itemIdentifier)
+            return nil
         }
         
         rxSection
             .subscribe(onNext: { [weak self] section in
                 guard let self else { return }
                 self.sectionStore.append(section)
-//                self.sectionStore.sort(using: <)
+                self.sectionStore.sort { pre, cur in
+                    pre.priority.rawValue > cur.priority.rawValue
+                }
                 self.reloadDataSource(animated: true)
             })
             .disposed(by: disposeBag)
@@ -61,7 +63,7 @@ class CKRCollectionController: CKRViewController {
         snapshot.appendSections(sectionStore.map { $0.id })
         
         sectionStore.forEach { section in
-//            snapshot.appendItems(section.itemStore.mapValues { $0 }, toSection: section.id)
+//            snapshot.appendItems(section.itemStore.map { $0.key }, toSection: section.id)
         }
         
         collectionViewDataSource.apply(snapshot, animatingDifferences: animated) {

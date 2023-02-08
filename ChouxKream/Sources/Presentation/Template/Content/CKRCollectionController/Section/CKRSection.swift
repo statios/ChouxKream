@@ -7,36 +7,19 @@
 
 import UIKit
 
-//struct AnySection: Hashable {
-//    
-//    var base: Any
-//    
-//    init<SectionType>(_ base: SectionType) where SectionType: CKRSection {
-//        self.base = base
-//    }
-//    
-//    static func == (lhs: AnySection, rhs: AnySection) -> Bool {
-//        
-//    }
-//    
-//}
-
-protocol CKRSection: Hashable, Comparable {
-    associatedtype Cell: CKRCell
+protocol CKRSection: Identifiable, Comparable where ID == String {
+    
+    associatedtype Cell: UICollectionViewCell
+    associatedtype Item: Hashable
     
     var id: String { get }
+    
     var priority: CKRSectionPriority { get }
-    var itemStore: [Cell.Item.ID: Cell.Item] { get }
+    
+    var itemStore: [Item] { get }
     
     func layout(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection
-}
-
-// MARK: - Hashable
-
-extension CKRSection {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
+    
 }
 
 // MARK: - Comparable
@@ -51,6 +34,12 @@ extension CKRSection {
         return lhs.id == rhs.id
     }
     
+}
+
+extension CKRSection {
+    var cellReuseIdentifier: String {
+        return Cell.reuseIdentifier
+    }
 }
 
 struct CKRSectionPriority: Hashable, Equatable, RawRepresentable {

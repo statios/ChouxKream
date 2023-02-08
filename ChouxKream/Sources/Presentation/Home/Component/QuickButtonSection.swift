@@ -10,12 +10,13 @@ import UIKit
 class QuickButtonSection: CKRSection {
     
     typealias Cell = QuickButtonCell
+    typealias Item = QuickButtonItem
     
     var id: String = UUID().uuidString
     
     var priority: CKRSectionPriority { .required }
     
-    var itemStore: [QuickButtonCellItem.ID : QuickButtonCellItem] = [:]
+    var itemStore: [QuickButtonItem] = []
     
     func layout(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(128))
@@ -28,20 +29,17 @@ class QuickButtonSection: CKRSection {
     
 }
 
-struct QuickButtonCellItem: Identifiable {
+struct QuickButtonItem: Hashable {
     var id: String
     var image: UIImage
     var title: String
     var deeplink: String
 }
 
-class QuickButtonCell: CKRCell {
+class QuickButtonCell: CKRCell<QuickButtonItem> {
     
-    typealias Item = QuickButtonCellItem
-    
-    func configure(item: QuickButtonCellItem) {
+    override func decorate(item: QuickButtonItem) {
         
     }
     
 }
-
