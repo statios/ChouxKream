@@ -19,6 +19,8 @@ class QuickButtonSection: CKRSection {
     
     var itemStore: [QuickButtonItem] = []
     
+    var header: CKRSectionHeaderItem?
+    
     func layout(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/5), heightDimension: .estimated(128))
         let item = NSCollectionLayoutItem(layoutSize: size)
@@ -30,7 +32,6 @@ class QuickButtonSection: CKRSection {
         section.interGroupSpacing = 16
         return section
     }
-    
 }
 
 struct QuickButtonItem: Hashable {

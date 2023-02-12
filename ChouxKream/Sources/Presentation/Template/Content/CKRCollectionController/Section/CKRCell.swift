@@ -7,17 +7,30 @@
 
 import UIKit
 
-class CKRCell: UICollectionViewCell {
+protocol CKRCellEventListener: AnyObject {
+    func receive(cellEvent: String, userInfo: [String: Any?])
+}
 
-    func configure(item: AnyHashable) {
-        
+class CKRCell: UICollectionViewCell {
+    
+    weak var listener: CKRCellEventListener?
+    
+    var indexPath: IndexPath?
+
+    func configure(item: AnyHashable, section: any CKRSection, indexPath: IndexPath) {
+        if let section = section as? CKRCellEventListener {
+            listener = section
+        }
+        self.indexPath = indexPath
     }
 
 }
 
 class CKRAttributedCell<Item>: CKRCell {
     
-    override func configure(item: AnyHashable) {
+    final override func configure(item: AnyHashable, section: any CKRSection, indexPath: IndexPath) {
+        super.configure(item: item, section: section, indexPath: indexPath)
+        
         if let item = item as? Item {
             decorate(item: item)
         }

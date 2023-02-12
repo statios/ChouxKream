@@ -16,10 +16,22 @@ protocol CKRSection: Identifiable, Comparable where ID == String {
     
     var priority: CKRSectionPriority { get set }
     
+    var header: CKRSectionHeaderItem? { get }
+    
     var itemStore: [Item] { get }
     
     func layout(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection
     
+}
+
+// MARK: - Default Implementation
+
+extension CKRSection {
+    var header: CKRSectionHeaderItem? { nil }
+    
+    func receive(cellEvent: String, userInfo: [String : Any?]) {
+        
+    }
 }
 
 // MARK: - Comparable

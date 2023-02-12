@@ -111,6 +111,9 @@
                                                                         <imageReference key="image" image="bookmark" catalog="system" symbolScale="large"/>
                                                                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="thin"/>
                                                                     </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="didTapBookmarkButton:" destination="mBq-3Z-PGP" eventType="touchUpInside" id="GN5-ma-TEK"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -169,10 +172,14 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Bnc-bG-E7R" firstAttribute="width" secondItem="WXX-AL-AyT" secondAttribute="width" priority="750" id="Lo7-r1-BIs"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="WXX-AL-AyT" secondAttribute="trailing" id="7Zl-Tn-kPk"/>
+                                                <constraint firstItem="WXX-AL-AyT" firstAttribute="width" secondItem="IZc-vi-v9K" secondAttribute="width" id="GvP-TX-1pR"/>
                                                 <constraint firstItem="WXX-AL-AyT" firstAttribute="leading" secondItem="IZc-vi-v9K" secondAttribute="leading" id="HcC-VF-nWh"/>
                                                 <constraint firstAttribute="bottom" secondItem="WXX-AL-AyT" secondAttribute="bottom" id="ZMG-aV-B8Q"/>
                                                 <constraint firstItem="WXX-AL-AyT" firstAttribute="top" secondItem="IZc-vi-v9K" secondAttribute="top" id="kdG-79-IJG"/>
@@ -192,6 +199,9 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="JNG-P5-Pg8"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

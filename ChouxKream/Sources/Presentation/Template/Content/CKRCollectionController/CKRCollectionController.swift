@@ -34,16 +34,63 @@ class CKRCollectionController: CKRViewController {
         
         prepareLayoutConfgiuration(layoutConfiguration)
         
+        collectionView.register(CKRSectionHeader.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: CKRSectionHeader.reuseIdentifier)
+        
         collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(sectionProvider: { [unowned self] index, environment in
-            return self.sectionStore[index].layout(environment: environment)
+            
+            let section = self.sectionStore[index]
+            
+            let sectionLayout = section.layout(environment: environment)
+            
+            if let _ = section.header {
+                let size = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1.0),
+                    heightDimension: .estimated(56)
+                )
+                let header = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: size,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top
+                )
+                sectionLayout.boundarySupplementaryItems = [header]
+            }
+            
+            return sectionLayout
         }, configuration: layoutConfiguration)
         
-        collectionViewDataSource = .init(collectionView: collectionView) { [unowned self] collectionView, indexPath, itemIdentifier in
+        collectionViewDataSource = .init(collectionView: collectionView) { [unowned self] collectionView, indexPath, _ in
             let section = self.sectionStore[indexPath.section]
             let reuseIdentifier = section.cellReuseIdentifier
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CKRCell
-            cell?.configure(item: itemIdentifier)
+            if let item = section.itemStore[indexPath.item] as? AnyHashable {
+                cell?.configure(item: item, section: section, indexPath: indexPath)
+            }
             return cell
+        }
+        
+        collectionViewDataSource.supplementaryViewProvider = { [weak self] collectionView, elementKind, indexPath in
+            
+            guard let self else { return nil }
+            
+            if elementKind == UICollectionView.elementKindSectionHeader {
+                
+                let header = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: elementKind,
+                    withReuseIdentifier: CKRSectionHeader.reuseIdentifier,
+                    for: indexPath
+                ) as? CKRSectionHeader
+                
+                if let headerItem = self.sectionStore[indexPath.section].header {
+                    header?.decorate(headerItem)
+                }
+                
+                return header
+            }
+            
+            return nil
+            
         }
         
         rxSection

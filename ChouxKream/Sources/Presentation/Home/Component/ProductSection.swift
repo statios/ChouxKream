@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class ProductSection: CKRSection {
+class ProductSection: CKRSection, CKRCellEventListener {
     
     typealias Cell = ProductCell
     typealias Item = ProductItem
@@ -16,6 +16,8 @@ class ProductSection: CKRSection {
     var id: String = UUID().uuidString
     
     var priority: CKRSectionPriority = .required
+    
+    var header: CKRSectionHeaderItem?
     
     var itemStore: [ProductItem] = []
     
@@ -28,6 +30,13 @@ class ProductSection: CKRSection {
         section.interGroupSpacing = 8
         section.orthogonalScrollingBehavior = .continuous
         return section
+    }
+    
+    func receive(cellEvent: String, userInfo: [String : Any?]) {
+        if cellEvent == "bookmark", let indexPath = userInfo["indexPath"] as? IndexPath {
+            let newValue = !itemStore[indexPath.item].isBookmarked
+            itemStore[indexPath.item].isBookmarked = newValue
+        }
     }
     
 }
@@ -94,4 +103,10 @@ class ProductCell: CKRAttributedCell<ProductItem> {
         
         bookmarkButton.isSelected = item.isBookmarked
     }
+    
+    @IBAction func didTapBookmarkButton(_ sender: Any) {
+        bookmarkButton.isSelected.toggle()
+        listener?.receive(cellEvent: "bookmark", userInfo: ["indexPath": indexPath])
+    }
+    
 }

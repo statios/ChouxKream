@@ -36,6 +36,7 @@ class HomeViewController: CKRCollectionController {
                 let section = ProductSection()
                 section.itemStore = products.toProductList
                 section.priority = .init(rawValue: 998)
+                section.header = CKRSectionHeaderItem(title: "Just Dropped", subtitle: "발매 상품")
                 return section
             }
             .bind(to: rxSection)
@@ -46,6 +47,7 @@ class HomeViewController: CKRCollectionController {
                 let section = QuickButtonSection()
                 section.itemStore = brands.toQuickButtonItem
                 section.priority = .init(rawValue: 997)
+                section.header = CKRSectionHeaderItem(title: "Brand Focus", subtitle: "추천 브랜드")
                 return section
             }
             .bind(to: rxSection)
