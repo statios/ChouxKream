@@ -32,6 +32,8 @@ class CKRCollectionController: CKRViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareLayoutConfgiuration(layoutConfiguration)
+        
         collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(sectionProvider: { [unowned self] index, environment in
             return self.sectionStore[index].layout(environment: environment)
         }, configuration: layoutConfiguration)
@@ -69,6 +71,10 @@ class CKRCollectionController: CKRViewController {
         collectionViewDataSource.apply(snapshot, animatingDifferences: animated) {
             completion?()
         }
+    }
+    
+    func prepareLayoutConfgiuration(_ configuration: UICollectionViewCompositionalLayoutConfiguration) {
+        configuration.interSectionSpacing = 32
     }
     
 }

@@ -16,7 +16,7 @@ protocol PromotionDataSource {
 
 class PromotionRepository: CKRRepository<[Promotion]> {
     
-    var fixtureDataSource: PromotionDataSource = PromotionFixtureDataSource()
+    private var fixtureDataSource: PromotionDataSource = PromotionFixtureDataSource()
     
     override func fetch() -> Single<[Promotion]> {
         return fixtureDataSource.fetchPromotion()

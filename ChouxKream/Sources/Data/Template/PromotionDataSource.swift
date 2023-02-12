@@ -51,36 +51,31 @@ struct PromotionFixtureDataSource: PromotionDataSource {
                 id: UUID().uuidString,
                 imageUrl: Fixture.randomTransparentShoeImage,
                 title: "정가 아래",
-                deeplink: "",
-                color: "#deebf5"
+                deeplink: ""
             ),
             Promotion(
                 id: UUID().uuidString,
                 imageUrl: Fixture.randomTransparentShoeImage,
                 title: "인기 럭셔리",
-                deeplink: "",
-                color: "#dff2ea"
+                deeplink: ""
             ),
             Promotion(
                 id: UUID().uuidString,
                 imageUrl: Fixture.randomTransparentShoeImage,
                 title: "밸런타인데이",
-                deeplink: "",
-                color: "#feede6"
+                deeplink: ""
             ),
             Promotion(
                 id: UUID().uuidString,
                 imageUrl: Fixture.randomTransparentShoeImage,
                 title: "6만 시크포인트",
-                deeplink: "",
-                color: "#f2eae4"
+                deeplink: ""
             ),
             Promotion(
                 id: UUID().uuidString,
                 imageUrl: Fixture.randomTransparentShoeImage,
                 title: "태그하고 포인트",
-                deeplink: "",
-                color: "#eaf1da"
+                deeplink: ""
             )
         ])
     }

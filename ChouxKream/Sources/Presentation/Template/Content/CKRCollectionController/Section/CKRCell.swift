@@ -15,7 +15,7 @@ class CKRCell: UICollectionViewCell {
 
 }
 
-class CKRBaseCell<Item>: CKRCell {
+class CKRAttributedCell<Item>: CKRCell {
     
     override func configure(item: AnyHashable) {
         if let item = item as? Item {
