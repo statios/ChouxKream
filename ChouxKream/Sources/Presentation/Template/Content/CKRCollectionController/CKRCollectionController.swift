@@ -39,9 +39,9 @@ class CKRCollectionController: CKRViewController {
         collectionViewDataSource = .init(collectionView: collectionView) { [unowned self] collectionView, indexPath, itemIdentifier in
             let section = self.sectionStore[indexPath.section]
             let reuseIdentifier = section.cellReuseIdentifier
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CKRCell<Any>
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CKRCell
             cell?.configure(item: itemIdentifier)
-            return nil
+            return cell
         }
         
         rxSection
@@ -63,7 +63,7 @@ class CKRCollectionController: CKRViewController {
         snapshot.appendSections(sectionStore.map { $0.id })
         
         sectionStore.forEach { section in
-//            snapshot.appendItems(section.itemStore.map { $0.key }, toSection: section.id)
+            snapshot.appendItems(section.itemStore.map { AnyHashable($0) }, toSection: section.id)
         }
         
         collectionViewDataSource.apply(snapshot, animatingDifferences: animated) {

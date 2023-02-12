@@ -96,6 +96,6 @@ class CKRViewController: UIViewController {
     
 }
 
-extension UIViewController: CKRPageBarItem {
-    
-}
+//extension UIViewController: CKRPageBarItem {
+//    
+//}

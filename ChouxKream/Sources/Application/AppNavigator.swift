@@ -15,12 +15,7 @@ struct AppNavigator {
         
         main.setViewControllers([
             CKRNavigationController(
-                CKRPageViewController.create([
-                    HomeViewController.default(),
-                    HomeViewController.default(),
-                    HomeViewController.default(),
-                    HomeViewController.default()
-                ], barLayout: .plain)
+                HomeViewController.default()
             ),
         ],animated: false)
         

@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F9432CA329881BDA00CFFC60 /* CKPageBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9432CA229881BDA00CFFC60 /* CKPageBarLayout.swift */; };
-		F9432CA529881BF700CFFC60 /* CKPageBarPlainLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9432CA429881BF700CFFC60 /* CKPageBarPlainLayout.swift */; };
+		F911BDC029980B6C00B4E888 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F911BDBF29980B6C00B4E888 /* Kingfisher */; };
+		F911BDC529980D9600B4E888 /* PromotionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911BDC429980D9600B4E888 /* PromotionRepository.swift */; };
+		F911BDC729980D9C00B4E888 /* PromotionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911BDC629980D9C00B4E888 /* PromotionDataSource.swift */; };
+		F911BDC929980DA700B4E888 /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911BDC829980DA700B4E888 /* Promotion.swift */; };
+		F911BDCB299922B500B4E888 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911BDCA299922B500B4E888 /* Fixture.swift */; };
+		F911BDCD299927B900B4E888 /* ProductSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911BDCC299927B900B4E888 /* ProductSection.swift */; };
 		F959D54C2986D40E006CAC08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D54B2986D40E006CAC08 /* HomeViewController.swift */; };
 		F959D54F2986D505006CAC08 /* CKRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D54E2986D505006CAC08 /* CKRViewController.swift */; };
 		F959D5512986D50D006CAC08 /* CKRCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5502986D50D006CAC08 /* CKRCollectionController.swift */; };
 		F959D5532986D57F006CAC08 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5522986D57F006CAC08 /* AppNavigator.swift */; };
-		F959D5552986D5BF006CAC08 /* CKRPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5542986D5BF006CAC08 /* CKRPageController.swift */; };
 		F959D5572986D5F2006CAC08 /* CKRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5562986D5F2006CAC08 /* CKRNavigationController.swift */; };
 		F959D55B2986D616006CAC08 /* CKRTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D55A2986D616006CAC08 /* CKRTabBarController.swift */; };
 		F959D55F2986DAAB006CAC08 /* ShopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F959D55E2986DAAB006CAC08 /* ShopViewController.storyboard */; };
@@ -21,8 +24,6 @@
 		F959D5632986DABD006CAC08 /* StyleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F959D5622986DABD006CAC08 /* StyleViewController.storyboard */; };
 		F959D5652986DAC4006CAC08 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5642986DAC4006CAC08 /* StyleViewController.swift */; };
 		F980C488298AD704004C7C8F /* QuickButtonSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F980C487298AD704004C7C8F /* QuickButtonSection.swift */; };
-		F980C48D298AD88C004C7C8F /* QuickButtonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F980C48C298AD88C004C7C8F /* QuickButtonRepository.swift */; };
-		F980C48F298AD893004C7C8F /* QuickButtonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F980C48E298AD893004C7C8F /* QuickButtonDataSource.swift */; };
 		F980C492298AD9ED004C7C8F /* CKRRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F980C491298AD9ED004C7C8F /* CKRRepository.swift */; };
 		F980C495298ADEB0004C7C8F /* RecommendBrandRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F980C494298ADEB0004C7C8F /* RecommendBrandRepository.swift */; };
 		F980C497298ADEFE004C7C8F /* RecommendBrandDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F980C496298ADEFE004C7C8F /* RecommendBrandDataSource.swift */; };
@@ -41,17 +42,18 @@
 		F9D5C5542986C13A0026EEDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5C5532986C13A0026EEDC /* SceneDelegate.swift */; };
 		F9D5C55B2986C13B0026EEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D5C55A2986C13B0026EEDC /* Assets.xcassets */; };
 		F9D5C55E2986C13B0026EEDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5C55C2986C13B0026EEDC /* LaunchScreen.storyboard */; };
-		F9F63EE22994086200F428C7 /* MerchandiseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F63EE12994086200F428C7 /* MerchandiseSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F9432CA229881BDA00CFFC60 /* CKPageBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CKPageBarLayout.swift; path = ../../../../../../../../../../Desktop/CKPageBarLayout.swift; sourceTree = "<group>"; };
-		F9432CA429881BF700CFFC60 /* CKPageBarPlainLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKPageBarPlainLayout.swift; sourceTree = "<group>"; };
+		F911BDC429980D9600B4E888 /* PromotionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionRepository.swift; sourceTree = "<group>"; };
+		F911BDC629980D9C00B4E888 /* PromotionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionDataSource.swift; sourceTree = "<group>"; };
+		F911BDC829980DA700B4E888 /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
+		F911BDCA299922B500B4E888 /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
+		F911BDCC299927B900B4E888 /* ProductSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSection.swift; sourceTree = "<group>"; };
 		F959D54B2986D40E006CAC08 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F959D54E2986D505006CAC08 /* CKRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRViewController.swift; sourceTree = "<group>"; };
 		F959D5502986D50D006CAC08 /* CKRCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRCollectionController.swift; sourceTree = "<group>"; };
 		F959D5522986D57F006CAC08 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
-		F959D5542986D5BF006CAC08 /* CKRPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRPageController.swift; sourceTree = "<group>"; };
 		F959D5562986D5F2006CAC08 /* CKRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRNavigationController.swift; sourceTree = "<group>"; };
 		F959D55A2986D616006CAC08 /* CKRTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRTabBarController.swift; sourceTree = "<group>"; };
 		F959D55E2986DAAB006CAC08 /* ShopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopViewController.storyboard; sourceTree = "<group>"; };
@@ -59,8 +61,6 @@
 		F959D5622986DABD006CAC08 /* StyleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StyleViewController.storyboard; sourceTree = "<group>"; };
 		F959D5642986DAC4006CAC08 /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
 		F980C487298AD704004C7C8F /* QuickButtonSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickButtonSection.swift; sourceTree = "<group>"; };
-		F980C48C298AD88C004C7C8F /* QuickButtonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickButtonRepository.swift; sourceTree = "<group>"; };
-		F980C48E298AD893004C7C8F /* QuickButtonDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickButtonDataSource.swift; sourceTree = "<group>"; };
 		F980C491298AD9ED004C7C8F /* CKRRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRRepository.swift; sourceTree = "<group>"; };
 		F980C494298ADEB0004C7C8F /* RecommendBrandRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendBrandRepository.swift; sourceTree = "<group>"; };
 		F980C496298ADEFE004C7C8F /* RecommendBrandDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendBrandDataSource.swift; sourceTree = "<group>"; };
@@ -78,7 +78,6 @@
 		F9D5C55A2986C13B0026EEDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9D5C55D2986C13B0026EEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9D5C55F2986C13B0026EEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9F63EE12994086200F428C7 /* MerchandiseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchandiseSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F911BDC029980B6C00B4E888 /* Kingfisher in Frameworks */,
 				F99B6A4029896FA100C0637A /* RxSwift in Frameworks */,
 				F99B6A3E29896FA100C0637A /* RxRelay in Frameworks */,
 				F99B6A3C29896FA100C0637A /* RxCocoa in Frameworks */,
@@ -95,22 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F9432CA029881BBB00CFFC60 /* CKRPageController */ = {
+		F911BDC329980D4600B4E888 /* Promotion */ = {
 			isa = PBXGroup;
 			children = (
-				F959D5542986D5BF006CAC08 /* CKRPageController.swift */,
-				F9432CA129881BC700CFFC60 /* CKPageBarLayout */,
+				F911BDC829980DA700B4E888 /* Promotion.swift */,
+				F911BDC429980D9600B4E888 /* PromotionRepository.swift */,
+				F911BDC629980D9C00B4E888 /* PromotionDataSource.swift */,
 			);
-			path = CKRPageController;
-			sourceTree = "<group>";
-		};
-		F9432CA129881BC700CFFC60 /* CKPageBarLayout */ = {
-			isa = PBXGroup;
-			children = (
-				F9432CA229881BDA00CFFC60 /* CKPageBarLayout.swift */,
-				F9432CA429881BF700CFFC60 /* CKPageBarPlainLayout.swift */,
-			);
-			path = CKPageBarLayout;
+			name = Promotion;
+			path = Template;
 			sourceTree = "<group>";
 		};
 		F959D5482986D3FD006CAC08 /* Home */ = {
@@ -138,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				F959D5562986D5F2006CAC08 /* CKRNavigationController.swift */,
-				F9432CA029881BBB00CFFC60 /* CKRPageController */,
 				F959D55A2986D616006CAC08 /* CKRTabBarController.swift */,
 			);
 			path = Container;
@@ -169,15 +161,6 @@
 				F959D5602986DAB4006CAC08 /* ShopViewController.swift */,
 			);
 			path = Shop;
-			sourceTree = "<group>";
-		};
-		F980C489298AD86C004C7C8F /* QuickButton */ = {
-			isa = PBXGroup;
-			children = (
-				F980C48C298AD88C004C7C8F /* QuickButtonRepository.swift */,
-				F980C48E298AD893004C7C8F /* QuickButtonDataSource.swift */,
-			);
-			path = QuickButton;
 			sourceTree = "<group>";
 		};
 		F980C490298AD9E7004C7C8F /* Template */ = {
@@ -211,8 +194,9 @@
 			isa = PBXGroup;
 			children = (
 				F980C490298AD9E7004C7C8F /* Template */,
-				F980C489298AD86C004C7C8F /* QuickButton */,
+				F911BDC329980D4600B4E888 /* Promotion */,
 				F980C493298ADE81004C7C8F /* RecommendBrand */,
+				F911BDCA299922B500B4E888 /* Fixture.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -231,7 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				F980C487298AD704004C7C8F /* QuickButtonSection.swift */,
-				F9F63EE12994086200F428C7 /* MerchandiseSection.swift */,
+				F911BDCC299927B900B4E888 /* ProductSection.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -331,6 +315,7 @@
 				F99B6A3B29896FA100C0637A /* RxCocoa */,
 				F99B6A3D29896FA100C0637A /* RxRelay */,
 				F99B6A3F29896FA100C0637A /* RxSwift */,
+				F911BDBF29980B6C00B4E888 /* Kingfisher */,
 			);
 			productName = ChouxKream;
 			productReference = F9D5C54E2986C13A0026EEDC /* ChouxKream.app */;
@@ -362,6 +347,7 @@
 			mainGroup = F9D5C5452986C13A0026EEDC;
 			packageReferences = (
 				F99B6A3A29896FA100C0637A /* XCRemoteSwiftPackageReference "RxSwift" */,
+				F911BDBE29980B6C00B4E888 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = F9D5C54F2986C13A0026EEDC /* Products */;
 			projectDirPath = "";
@@ -392,30 +378,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F911BDC529980D9600B4E888 /* PromotionRepository.swift in Sources */,
 				F959D5572986D5F2006CAC08 /* CKRNavigationController.swift in Sources */,
 				F99B6A30298964B600C0637A /* ReleaseViewController.swift in Sources */,
 				F980C497298ADEFE004C7C8F /* RecommendBrandDataSource.swift in Sources */,
-				F9432CA529881BF700CFFC60 /* CKPageBarPlainLayout.swift in Sources */,
 				F9D5C5522986C13A0026EEDC /* AppDelegate.swift in Sources */,
-				F9432CA329881BDA00CFFC60 /* CKPageBarLayout.swift in Sources */,
 				F980C492298AD9ED004C7C8F /* CKRRepository.swift in Sources */,
+				F911BDC729980D9C00B4E888 /* PromotionDataSource.swift in Sources */,
 				F959D5612986DAB4006CAC08 /* ShopViewController.swift in Sources */,
 				F980C495298ADEB0004C7C8F /* RecommendBrandRepository.swift in Sources */,
 				F99B6A552989891300C0637A /* CKRCell.swift in Sources */,
 				F99B6A4E2989863200C0637A /* CKRSection.swift in Sources */,
-				F959D5552986D5BF006CAC08 /* CKRPageController.swift in Sources */,
 				F959D55B2986D616006CAC08 /* CKRTabBarController.swift in Sources */,
 				F959D5532986D57F006CAC08 /* AppNavigator.swift in Sources */,
 				F9D5C5542986C13A0026EEDC /* SceneDelegate.swift in Sources */,
 				F959D54C2986D40E006CAC08 /* HomeViewController.swift in Sources */,
 				F99B6A322989671A00C0637A /* ExhibitionViewController.swift in Sources */,
 				F959D5512986D50D006CAC08 /* CKRCollectionController.swift in Sources */,
+				F911BDCD299927B900B4E888 /* ProductSection.swift in Sources */,
+				F911BDCB299922B500B4E888 /* Fixture.swift in Sources */,
 				F959D5652986DAC4006CAC08 /* StyleViewController.swift in Sources */,
 				F980C488298AD704004C7C8F /* QuickButtonSection.swift in Sources */,
-				F980C48D298AD88C004C7C8F /* QuickButtonRepository.swift in Sources */,
-				F980C48F298AD893004C7C8F /* QuickButtonDataSource.swift in Sources */,
-				F9F63EE22994086200F428C7 /* MerchandiseSection.swift in Sources */,
 				F959D54F2986D505006CAC08 /* CKRViewController.swift in Sources */,
+				F911BDC929980DA700B4E888 /* Promotion.swift in Sources */,
 				F99B6A2A2989647500C0637A /* GenderViewController.swift in Sources */,
 				F99B6A53298986BA00C0637A /* SectionLayout.swift in Sources */,
 				F99B6A5829898B3B00C0637A /* UIView+.swift in Sources */,
@@ -632,6 +617,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F911BDBE29980B6C00B4E888 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		F99B6A3A29896FA100C0637A /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -643,6 +636,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F911BDBF29980B6C00B4E888 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F911BDBE29980B6C00B4E888 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		F99B6A3B29896FA100C0637A /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F99B6A3A29896FA100C0637A /* XCRemoteSwiftPackageReference "RxSwift" */;

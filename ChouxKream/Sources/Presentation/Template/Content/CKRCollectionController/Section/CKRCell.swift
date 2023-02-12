@@ -7,9 +7,17 @@
 
 import UIKit
 
-class CKRCell<Item>: UICollectionViewCell {
-    
+class CKRCell: UICollectionViewCell {
+
     func configure(item: AnyHashable) {
+        
+    }
+
+}
+
+class CKRBaseCell<Item>: CKRCell {
+    
+    override func configure(item: AnyHashable) {
         if let item = item as? Item {
             decorate(item: item)
         }

@@ -9,8 +9,7 @@ import UIKit
 
 class HomeViewController: CKRCollectionController {
     
-    private let quickButtonRepository: CKRRepository = QuickButtonRepository()
-    private let recommendBrandRepository: CKRRepository = RecommendBrandRepository()
+    private let promotionRepository = PromotionRepository()
     
     override var title: String? {
         get { "추천" }
@@ -20,18 +19,11 @@ class HomeViewController: CKRCollectionController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .random
-        
-        quickButtonRepository.listen()
-            .map { quickButtons in
-                QuickButtonSection()
-            }
-            .bind(to: rxSection)
-            .disposed(by: disposeBag)
-        
-        recommendBrandRepository.listen()
-            .map { recommendBrands in
-                QuickButtonSection()
+        promotionRepository.listen()
+            .map { promotions in
+                let section = QuickButtonSection()
+                section.itemStore = promotions.toQuickButtonList
+                return section
             }
             .bind(to: rxSection)
             .disposed(by: disposeBag)
