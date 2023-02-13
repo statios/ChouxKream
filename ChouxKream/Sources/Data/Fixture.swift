@@ -40,4 +40,21 @@ struct Fixture {
             181000, 143000, 107000, 279000, 279000, 273000
         ].randomElement()!
     }
+    
+    static var randomArchitectureImage: String {
+        [
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f2a05701-8091-491a-9153-f10098372252/pierre-chatel-innocenti-YDarsL40neU-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T140722Z&X-Amz-Expires=86400&X-Amz-Signature=0a7d1ff5c192f52d88ef7cdf1359db9e4b8b497cbf7dee08fcdc35c74d050b9f&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22pierre-chatel-innocenti-YDarsL40neU-unsplash.jpg%22&x-id=GetObject",
+
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/911edb99-0644-49e8-8b04-5103e81e522e/thanos-pal-g_DTWgRypfE-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T140733Z&X-Amz-Expires=86400&X-Amz-Signature=91b143c1b79f677fff2ba8567ed337bf8bb3dfd42c961746c32fc4bb5c20b3f7&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22thanos-pal-g_DTWgRypfE-unsplash.jpg%22&x-id=GetObject",
+
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fe972017-31fc-405b-aec6-f3ad594d71c5/iltun-huseynli-OH7GkUqiuZk-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T140737Z&X-Amz-Expires=86400&X-Amz-Signature=c536391a6b1bd98141579be237c52a1abb0485adf64364ac4d999c964c290680&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22iltun-huseynli-OH7GkUqiuZk-unsplash.jpg%22&x-id=GetObject",
+
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ee36588d-20e6-4770-a0f6-56a4323da741/luke-van-zyl-koH7IVuwRLw-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T140740Z&X-Amz-Expires=86400&X-Amz-Signature=fead33a4e13bc3c52fac7ae0b0e313b89d2bd4747ec5134b564452898f3e30d9&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22luke-van-zyl-koH7IVuwRLw-unsplash.jpg%22&x-id=GetObject",
+
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/86da6d63-4c39-4021-947a-8d7297f93224/julien-moreau-688Fna1pwOQ-unsplash-2.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T140745Z&X-Amz-Expires=86400&X-Amz-Signature=3fad0432864a6ca5bc323a9ad1f951e54b89a4c54852fff6e4b4c886df148d34&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22julien-moreau-688Fna1pwOQ-unsplash-2.jpg%22&x-id=GetObject",
+
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c8812807-d70c-46a7-89f1-792d935c8ce8/kimon-maritz-mQiZnKwGXW0-unsplash-2.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T140749Z&X-Amz-Expires=86400&X-Amz-Signature=3f1a6b03a43254ef8cbf2f966851df76096893a71a897ae53f167d361c1b5702&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22kimon-maritz-mQiZnKwGXW0-unsplash-2.jpg%22&x-id=GetObject"
+        ].randomElement()!
+    }
+    
 }

@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomeViewController: CKRCollectionController {
     
+    private let homeBannerRepository = HomeBannerRepository()
     private let promotionRepository = PromotionRepository()
     private let droppedProductRepository = DroppedProductRepository()
     private let recommendBrandRepository = RecommendBrandRepository()
@@ -21,6 +23,16 @@ class HomeViewController: CKRCollectionController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        homeBannerRepository.listen()
+            .map { banners in
+                let section = BannerPageSection()
+                section.itemStore = [banners.toBannerPageItem]
+                section.priority = .init(rawValue: 1000)
+                return section
+            }
+            .bind(to: rxSection)
+            .disposed(by: disposeBag)
+
         promotionRepository.listen()
             .map { promotions in
                 let section = QuickButtonSection()
@@ -30,7 +42,7 @@ class HomeViewController: CKRCollectionController {
             }
             .bind(to: rxSection)
             .disposed(by: disposeBag)
-        
+
         droppedProductRepository.listen()
             .map { products in
                 let section = ProductSection()

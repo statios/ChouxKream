@@ -54,6 +54,8 @@ class QuickButtonCell: CKRAttributedCell<QuickButtonItem> {
         
         titleLabel.text = item.title
         imageView.backgroundColor = item.color
+        
+        setNeedsDisplay()
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

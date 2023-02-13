@@ -94,12 +94,14 @@ class CKRCollectionController: CKRViewController {
         }
         
         rxSection
+            .subscribe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] section in
                 guard let self else { return }
                 self.sectionStore.append(section)
                 self.sectionStore.sort { pre, cur in
                     pre.priority.rawValue > cur.priority.rawValue
                 }
+            
                 self.reloadDataSource(animated: true)
             })
             .disposed(by: disposeBag)

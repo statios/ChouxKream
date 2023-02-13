@@ -198,6 +198,14 @@
                                             <outlet property="titleLabel" destination="sEy-uo-khg" id="Kx0-Yu-PBB"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerPageCell" id="XyB-hN-7rG" customClass="BannerPageCell" customModule="ChouxKream" customModuleProvider="target">
+                                        <rect key="frame" x="95.666666666666671" y="527.33333333333337" width="202" height="177"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fn1-VF-c4X">
+                                            <rect key="frame" x="0.0" y="0.0" width="202" height="177"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
                                 </cells>
                                 <connections>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="JNG-P5-Pg8"/>

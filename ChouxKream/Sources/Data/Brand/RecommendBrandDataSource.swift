@@ -12,7 +12,7 @@ struct RecommendBrandFixtureDataSource: RecommendBrandDataSource {
     
     func fetchRecommendBrand() -> Single<[Brand]> {
         return .just(
-            (0..<5*3).map({ _ in
+            (0..<3*5).map({ _ in
                 Brand(
                     id: UUID().uuidString,
                     name: Fixture.randomBrandName,
