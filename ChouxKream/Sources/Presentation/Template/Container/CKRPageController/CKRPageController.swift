@@ -9,7 +9,7 @@ import UIKit
 
 class CKRPageController: CKRViewController {
     
-    private var viewControllers = [UIViewController]()
+    private(set) var viewControllers = [UIViewController]()
     
     private var pageContainer: UIView!
     private var pageController = UIPageViewController(
@@ -41,10 +41,15 @@ class CKRPageController: CKRViewController {
         attachContent(viewController: pageController, container: pageContainer)
         
         pageController.dataSource = self
+        pageController.delegate = self
         
         if let viewController = viewControllers.first {
             pageController.setViewControllers([viewController], direction: .forward, animated: false)
         }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didTransitionTo index: Int) {
+        
     }
     
 }
@@ -81,6 +86,12 @@ extension CKRPageController: UIPageViewControllerDelegate {
                             didFinishAnimating finished: Bool,
                             previousViewControllers: [UIViewController],
                             transitionCompleted completed: Bool) {
+        guard completed,
+              let viewController = pageViewController.viewControllers?.first,
+              let index = viewControllers.firstIndex(of: viewController) else { return }
+        
+        self.pageViewController(pageViewController, didTransitionTo: index)
+        
     }
     
 }

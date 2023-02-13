@@ -36,6 +36,7 @@ final class BannerViewController: CKRViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .random.withAlphaComponent(0.125)
         imageView.kf.setImage(with: URL(string: itemStore.imageUrl))
     }
     

@@ -57,4 +57,44 @@ struct Fixture {
         ].randomElement()!
     }
     
+    static var randomUserImage: String {
+        [
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2967acd0-c2f9-4972-a186-982fe06aa40f/etty-fidele-nWdhpUrXxYY-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T150318Z&X-Amz-Expires=86400&X-Amz-Signature=48d42f01e60b148ca561f08433b887fd37199c9534fba9cc5fe8a14879df7e75&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22etty-fidele-nWdhpUrXxYY-unsplash.jpg%22&x-id=GetObject",
+            
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5777b33c-c827-4f05-bdad-86cb6cb1cc0f/raj-rana-15Vb4B_ma_s-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T150321Z&X-Amz-Expires=86400&X-Amz-Signature=228cc4edf12cd5232e77733596f679e46823bbb0dade0f67a77fd60cbc64a400&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22raj-rana-15Vb4B_ma_s-unsplash.jpg%22&x-id=GetObject",
+            
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7204655a-41c6-40df-88bc-02e5b88448b5/tim-gouw-1K9T5YiZ2WU-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T150325Z&X-Amz-Expires=86400&X-Amz-Signature=850b92467b03c1d0691eb70b5c0ab41d1f9893c802e512f42ed465b3a1ee0dc7&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22tim-gouw-1K9T5YiZ2WU-unsplash.jpg%22&x-id=GetObject",
+            
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ee9125cb-bc61-4812-aa00-af8ff101f24c/brian-mcgowan-LObpG0ku8VM-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T150328Z&X-Amz-Expires=86400&X-Amz-Signature=e34ac6d347e2d15879c85817ff77eaa93ce1f5850e5c6e7033a1fe6529b1cd13&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22brian-mcgowan-LObpG0ku8VM-unsplash.jpg%22&x-id=GetObject",
+            
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e96c9ed0-1a49-4649-a426-8644d621d471/moises-alex-LkZRTThjBHA-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T150331Z&X-Amz-Expires=86400&X-Amz-Signature=acd21cee1564ff4379a38e5996657c4a1451d51022b08e3e01d23e1e0679e632&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22moises-alex-LkZRTThjBHA-unsplash.jpg%22&x-id=GetObject",
+            
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/36083b32-ce0c-454f-9dcb-6ac495a60af6/joe-ciciarelli-BVNmFNShq6U-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T150343Z&X-Amz-Expires=86400&X-Amz-Signature=40ab80e1d0356864ea0754af11fd25ac72235090bfb98128bf10f7666604bb82&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22joe-ciciarelli-BVNmFNShq6U-unsplash.jpg%22&x-id=GetObject",
+            
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d89d4ef0-697e-47de-a4fb-7e4cb34de62b/alex-kotliarskyi-ourQHRTE2IM-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T150339Z&X-Amz-Expires=86400&X-Amz-Signature=97e1ffb8d2e2895ed15b06a0656b02d01100da384543fc3052be0fec1c479d50&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22alex-kotliarskyi-ourQHRTE2IM-unsplash.jpg%22&x-id=GetObject"
+        ].randomElement()!
+    }
+    
+    static var randomUsername: String {
+        [
+            "@ohhsung__", "@_j__soon_", "@_beengrea5", "@fa.ispa", "@stat.ios", "@tani_ssi", "@choux_kream"
+        ].randomElement()!
+    }
+    
+    static var randomStyleImage: String {
+        [
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/18b70ce1-78f0-414f-b140-d847b56921b8/darran-shen-o9qw2WHKKFs-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T151041Z&X-Amz-Expires=86400&X-Amz-Signature=d0d49405f8d838bb8514c76114e51f4ea4c0325fa90558a2a692df0aecf61759&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22darran-shen-o9qw2WHKKFs-unsplash.jpg%22&x-id=GetObject",
+
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8d48cf61-ff51-47ba-a703-abe4599f615c/laura-chouette-KCBy2qFWBF0-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T151045Z&X-Amz-Expires=86400&X-Amz-Signature=ba9593de343fc1fe7fc8142088b49c914371120f8ea2a9767ecd729a7caf6b13&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22laura-chouette-KCBy2qFWBF0-unsplash.jpg%22&x-id=GetObject",
+
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e2446432-1e7b-427c-90e7-fd06adbe0e92/sonnie-hiles-yIej4tFKYJA-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T151047Z&X-Amz-Expires=86400&X-Amz-Signature=cd5cc7f99ce3681ede1923eb02b23c9527c95ce909b2500507075ec1e5750f5f&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22sonnie-hiles-yIej4tFKYJA-unsplash.jpg%22&x-id=GetObject",
+
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1ac13ba8-9428-4e3c-a7ce-0ac4f1899675/rodgers-otieno-DwTO1h0D4b4-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T151048Z&X-Amz-Expires=86400&X-Amz-Signature=277a374f6454f5c0ff0b6de18f967c4593f0470a1228cd56ee12484495e26a00&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22rodgers-otieno-DwTO1h0D4b4-unsplash.jpg%22&x-id=GetObject",
+
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/53b4bc01-6c16-466d-9dca-c7a86f531967/refargotohp-mgmYIyYy5Lo-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T151052Z&X-Amz-Expires=86400&X-Amz-Signature=2a0ffdf25d5e2ea78abfdfcf1c8c35cf607e6b8742d65ddbcdb76c8f8896dfa8&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22refargotohp-mgmYIyYy5Lo-unsplash.jpg%22&x-id=GetObject",
+
+            "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/643ce886-7599-417c-90a9-792b30ba4e25/dom-hill-nimElTcTNyY-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230213%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230213T151055Z&X-Amz-Expires=86400&X-Amz-Signature=67b84721e96e7967f201873e0eaf8d52098708491aa4212b05cd77b9193c0da7&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22dom-hill-nimElTcTNyY-unsplash.jpg%22&x-id=GetObject"
+        ].randomElement()!
+    }
+    
 }

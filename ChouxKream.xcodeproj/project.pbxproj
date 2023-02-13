@@ -54,6 +54,13 @@
 		F9D653C8299A690100C796F6 /* CKRPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D653C7299A690100C796F6 /* CKRPageController.swift */; };
 		F9D653CA299A6CEE00C796F6 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D653C9299A6CEE00C796F6 /* BannerViewController.swift */; };
 		F9D653CD299A6D0800C796F6 /* BannerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D653CC299A6D0800C796F6 /* BannerViewController.storyboard */; };
+		F9D653D0299A7C7700C796F6 /* CKRLinearPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D653CF299A7C7700C796F6 /* CKRLinearPageController.swift */; };
+		F9D653D2299A82CD00C796F6 /* PopularProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D653D1299A82CD00C796F6 /* PopularProductRepository.swift */; };
+		F9D653D4299A82D600C796F6 /* PopularProductDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D653D3299A82D600C796F6 /* PopularProductDataSource.swift */; };
+		F9D653D6299A848500C796F6 /* StyleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D653D5299A848500C796F6 /* StyleSection.swift */; };
+		F9D653D9299A86A500C796F6 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D653D8299A86A500C796F6 /* Feed.swift */; };
+		F9D653DB299A86BE00C796F6 /* StylePicksFeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D653DA299A86BE00C796F6 /* StylePicksFeedRepository.swift */; };
+		F9D653DD299A86C800C796F6 /* StylePicksFeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D653DC299A86C800C796F6 /* StylePicksFeedDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +109,13 @@
 		F9D653C7299A690100C796F6 /* CKRPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRPageController.swift; sourceTree = "<group>"; };
 		F9D653C9299A6CEE00C796F6 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		F9D653CC299A6D0800C796F6 /* BannerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BannerViewController.storyboard; sourceTree = "<group>"; };
+		F9D653CF299A7C7700C796F6 /* CKRLinearPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRLinearPageController.swift; sourceTree = "<group>"; };
+		F9D653D1299A82CD00C796F6 /* PopularProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductRepository.swift; sourceTree = "<group>"; };
+		F9D653D3299A82D600C796F6 /* PopularProductDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductDataSource.swift; sourceTree = "<group>"; };
+		F9D653D5299A848500C796F6 /* StyleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSection.swift; sourceTree = "<group>"; };
+		F9D653D8299A86A500C796F6 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		F9D653DA299A86BE00C796F6 /* StylePicksFeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylePicksFeedRepository.swift; sourceTree = "<group>"; };
+		F9D653DC299A86C800C796F6 /* StylePicksFeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylePicksFeedDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +150,8 @@
 				F911BDCF29992B0000B4E888 /* Product.swift */,
 				F911BDD129992B0600B4E888 /* DroppedProductRepository.swift */,
 				F911BDD329992B0C00B4E888 /* DroppedProductDataSource.swift */,
+				F9D653D1299A82CD00C796F6 /* PopularProductRepository.swift */,
+				F9D653D3299A82D600C796F6 /* PopularProductDataSource.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -186,7 +202,7 @@
 			children = (
 				F959D5562986D5F2006CAC08 /* CKRNavigationController.swift */,
 				F959D55A2986D616006CAC08 /* CKRTabBarController.swift */,
-				F9D653C7299A690100C796F6 /* CKRPageController.swift */,
+				F9D653CE299A7C6000C796F6 /* CKRPageController */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -244,6 +260,7 @@
 				F911BDCE29992AF400B4E888 /* Product */,
 				F911BDD72999406500B4E888 /* Brand */,
 				F911BDE2299967A800B4E888 /* Banner */,
+				F9D653D7299A869A00C796F6 /* Feed */,
 				F911BDCA299922B500B4E888 /* Fixture.swift */,
 			);
 			path = Data;
@@ -265,6 +282,7 @@
 				F980C487298AD704004C7C8F /* QuickButtonSection.swift */,
 				F911BDCC299927B900B4E888 /* ProductSection.swift */,
 				F911BDE02999669100B4E888 /* BannerPageSection.swift */,
+				F9D653D5299A848500C796F6 /* StyleSection.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -353,6 +371,25 @@
 				F9D653CC299A6D0800C796F6 /* BannerViewController.storyboard */,
 			);
 			path = Banner;
+			sourceTree = "<group>";
+		};
+		F9D653CE299A7C6000C796F6 /* CKRPageController */ = {
+			isa = PBXGroup;
+			children = (
+				F9D653C7299A690100C796F6 /* CKRPageController.swift */,
+				F9D653CF299A7C7700C796F6 /* CKRLinearPageController.swift */,
+			);
+			path = CKRPageController;
+			sourceTree = "<group>";
+		};
+		F9D653D7299A869A00C796F6 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F9D653D8299A86A500C796F6 /* Feed.swift */,
+				F9D653DA299A86BE00C796F6 /* StylePicksFeedRepository.swift */,
+				F9D653DC299A86C800C796F6 /* StylePicksFeedDataSource.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,6 +487,7 @@
 				F911BDDF2999477800B4E888 /* CKRSectionHeader.swift in Sources */,
 				F959D5612986DAB4006CAC08 /* ShopViewController.swift in Sources */,
 				F9D653CA299A6CEE00C796F6 /* BannerViewController.swift in Sources */,
+				F9D653DB299A86BE00C796F6 /* StylePicksFeedRepository.swift in Sources */,
 				F911BDD029992B0000B4E888 /* Product.swift in Sources */,
 				F99B6A552989891300C0637A /* CKRCell.swift in Sources */,
 				F99B6A4E2989863200C0637A /* CKRSection.swift in Sources */,
@@ -463,17 +501,23 @@
 				F959D5512986D50D006CAC08 /* CKRCollectionController.swift in Sources */,
 				F911BDCD299927B900B4E888 /* ProductSection.swift in Sources */,
 				F911BDCB299922B500B4E888 /* Fixture.swift in Sources */,
+				F9D653D4299A82D600C796F6 /* PopularProductDataSource.swift in Sources */,
 				F959D5652986DAC4006CAC08 /* StyleViewController.swift in Sources */,
+				F9D653D6299A848500C796F6 /* StyleSection.swift in Sources */,
 				F980C488298AD704004C7C8F /* QuickButtonSection.swift in Sources */,
 				F959D54F2986D505006CAC08 /* CKRViewController.swift in Sources */,
 				F911BDD429992B0C00B4E888 /* DroppedProductDataSource.swift in Sources */,
 				F911BDE12999669100B4E888 /* BannerPageSection.swift in Sources */,
+				F9D653D9299A86A500C796F6 /* Feed.swift in Sources */,
 				F911BDE8299967DE00B4E888 /* HomeBannerDataSource.swift in Sources */,
 				F911BDE4299967B700B4E888 /* Banner.swift in Sources */,
+				F9D653DD299A86C800C796F6 /* StylePicksFeedDataSource.swift in Sources */,
 				F911BDDB2999408200B4E888 /* RecommendBrandRepository.swift in Sources */,
 				F911BDDD2999408B00B4E888 /* RecommendBrandDataSource.swift in Sources */,
+				F9D653D2299A82CD00C796F6 /* PopularProductRepository.swift in Sources */,
 				F911BDC929980DA700B4E888 /* Promotion.swift in Sources */,
 				F99B6A2A2989647500C0637A /* GenderViewController.swift in Sources */,
+				F9D653D0299A7C7700C796F6 /* CKRLinearPageController.swift in Sources */,
 				F911BDD62999378E00B4E888 /* String+.swift in Sources */,
 				F99B6A5829898B3B00C0637A /* UIView+.swift in Sources */,
 			);

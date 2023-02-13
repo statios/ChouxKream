@@ -40,6 +40,7 @@ class CKRSectionHeader: UICollectionReusableView {
         content.spacing = 4
         content.addArrangedSubview(titleLabel)
         content.addArrangedSubview(subtitleLabel)
+        content.backgroundColor = .blue
         
         let horizontal = UIStackView()
         horizontal.axis = .horizontal
@@ -50,6 +51,7 @@ class CKRSectionHeader: UICollectionReusableView {
         horizontal.alignment = .lastBaseline
         horizontal.addArrangedSubview(content)
         horizontal.addArrangedSubview(deeplinkLabel)
+        horizontal.backgroundColor = .red
         
         addSubview(horizontal)
         

@@ -22,7 +22,7 @@ class BannerPageSection: CKRSection, CKRCellEventListener {
     var itemStore: [BannerPageItem] = []
     
     func layout(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(224))
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(256))
         let item = NSCollectionLayoutItem(layoutSize: size)
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
@@ -66,12 +66,10 @@ class BannerPageCell: CKRAttributedCell<BannerPageItem> {
         super.decorate(item: item)
         
         let viewControllers = item.bannerItems.map { item in
-            let viewController = BannerViewController.create(item.toBannerViewControllerItem)
-            viewController.view.backgroundColor = .random
-            return viewController
+            return BannerViewController.create(item.toBannerViewControllerItem)
         }
         
-        let pageController = CKRPageController(viewControllers)
+        let pageController = CKRLinearPageController(viewControllers)
         
         viewController?.addChild(pageController)
         
