@@ -19,7 +19,7 @@ struct HomeBannerFixtureDataSource: HomeBannerDataSource {
                     deeplink: ""
                 )
             })
-        )
+        ).delay(.microseconds(Int.random(in: 0...500)), scheduler: MainScheduler.instance)
     }
     
 }

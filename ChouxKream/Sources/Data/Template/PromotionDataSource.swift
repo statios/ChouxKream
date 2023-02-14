@@ -77,7 +77,7 @@ struct PromotionFixtureDataSource: PromotionDataSource {
                 title: "태그하고 포인트",
                 deeplink: ""
             )
-        ])
+        ]).delay(.microseconds(Int.random(in: 0...500)), scheduler: MainScheduler.instance)
     }
     
 }

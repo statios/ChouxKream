@@ -20,7 +20,7 @@ struct StylePicksFeedFixtureDataSource: StylePicksFeedDataSource {
                     userImageUrl: Fixture.randomUserImage
                 )
             })
-        )
+        ).delay(.microseconds(Int.random(in: 0...500)), scheduler: MainScheduler.instance)
     }
     
 }

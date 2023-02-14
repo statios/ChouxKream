@@ -19,7 +19,7 @@ struct RecommendBrandFixtureDataSource: RecommendBrandDataSource {
                     imageUrl: Fixture.randomTransparentShoeImage
                 )
             })
-        )
+        ).delay(.microseconds(Int.random(in: 0...500)), scheduler: MainScheduler.instance)
     }
     
 }

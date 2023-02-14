@@ -31,15 +31,10 @@
 		F959D5532986D57F006CAC08 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5522986D57F006CAC08 /* AppNavigator.swift */; };
 		F959D5572986D5F2006CAC08 /* CKRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5562986D5F2006CAC08 /* CKRNavigationController.swift */; };
 		F959D55B2986D616006CAC08 /* CKRTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D55A2986D616006CAC08 /* CKRTabBarController.swift */; };
-		F959D55F2986DAAB006CAC08 /* ShopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F959D55E2986DAAB006CAC08 /* ShopViewController.storyboard */; };
-		F959D5612986DAB4006CAC08 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5602986DAB4006CAC08 /* ShopViewController.swift */; };
-		F959D5632986DABD006CAC08 /* StyleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F959D5622986DABD006CAC08 /* StyleViewController.storyboard */; };
-		F959D5652986DAC4006CAC08 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959D5642986DAC4006CAC08 /* StyleViewController.swift */; };
+		F96927F8299BDF8B00FA063D /* CKRGlenPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96927F7299BDF8B00FA063D /* CKRGlenPageController.swift */; };
+		F96927FA299BECA600FA063D /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96927F9299BECA600FA063D /* AppAppearance.swift */; };
 		F980C488298AD704004C7C8F /* QuickButtonSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F980C487298AD704004C7C8F /* QuickButtonSection.swift */; };
 		F980C492298AD9ED004C7C8F /* CKRRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F980C491298AD9ED004C7C8F /* CKRRepository.swift */; };
-		F99B6A2A2989647500C0637A /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B6A292989647500C0637A /* GenderViewController.swift */; };
-		F99B6A30298964B600C0637A /* ReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B6A2F298964B600C0637A /* ReleaseViewController.swift */; };
-		F99B6A322989671A00C0637A /* ExhibitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B6A312989671A00C0637A /* ExhibitionViewController.swift */; };
 		F99B6A392989690000C0637A /* CKRCollectionController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99B6A382989690000C0637A /* CKRCollectionController.storyboard */; };
 		F99B6A3C29896FA100C0637A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F99B6A3B29896FA100C0637A /* RxCocoa */; };
 		F99B6A3E29896FA100C0637A /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F99B6A3D29896FA100C0637A /* RxRelay */; };
@@ -87,15 +82,10 @@
 		F959D5522986D57F006CAC08 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		F959D5562986D5F2006CAC08 /* CKRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRNavigationController.swift; sourceTree = "<group>"; };
 		F959D55A2986D616006CAC08 /* CKRTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRTabBarController.swift; sourceTree = "<group>"; };
-		F959D55E2986DAAB006CAC08 /* ShopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopViewController.storyboard; sourceTree = "<group>"; };
-		F959D5602986DAB4006CAC08 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
-		F959D5622986DABD006CAC08 /* StyleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StyleViewController.storyboard; sourceTree = "<group>"; };
-		F959D5642986DAC4006CAC08 /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
+		F96927F7299BDF8B00FA063D /* CKRGlenPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRGlenPageController.swift; sourceTree = "<group>"; };
+		F96927F9299BECA600FA063D /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		F980C487298AD704004C7C8F /* QuickButtonSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickButtonSection.swift; sourceTree = "<group>"; };
 		F980C491298AD9ED004C7C8F /* CKRRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRRepository.swift; sourceTree = "<group>"; };
-		F99B6A292989647500C0637A /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
-		F99B6A2F298964B600C0637A /* ReleaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseViewController.swift; sourceTree = "<group>"; };
-		F99B6A312989671A00C0637A /* ExhibitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionViewController.swift; sourceTree = "<group>"; };
 		F99B6A382989690000C0637A /* CKRCollectionController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CKRCollectionController.storyboard; sourceTree = "<group>"; };
 		F99B6A4D2989863200C0637A /* CKRSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRSection.swift; sourceTree = "<group>"; };
 		F99B6A542989891300C0637A /* CKRCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRCell.swift; sourceTree = "<group>"; };
@@ -180,9 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				F959D54B2986D40E006CAC08 /* HomeViewController.swift */,
-				F99B6A292989647500C0637A /* GenderViewController.swift */,
-				F99B6A2F298964B600C0637A /* ReleaseViewController.swift */,
-				F99B6A312989671A00C0637A /* ExhibitionViewController.swift */,
 				F99B6A4F2989865500C0637A /* Component */,
 			);
 			path = Home;
@@ -216,27 +203,10 @@
 			path = Content;
 			sourceTree = "<group>";
 		};
-		F959D55C2986DA90006CAC08 /* Style */ = {
-			isa = PBXGroup;
-			children = (
-				F959D5622986DABD006CAC08 /* StyleViewController.storyboard */,
-				F959D5642986DAC4006CAC08 /* StyleViewController.swift */,
-			);
-			path = Style;
-			sourceTree = "<group>";
-		};
-		F959D55D2986DA95006CAC08 /* Shop */ = {
-			isa = PBXGroup;
-			children = (
-				F959D55E2986DAAB006CAC08 /* ShopViewController.storyboard */,
-				F959D5602986DAB4006CAC08 /* ShopViewController.swift */,
-			);
-			path = Shop;
-			sourceTree = "<group>";
-		};
 		F980C490298AD9E7004C7C8F /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				F911BDCA299922B500B4E888 /* Fixture.swift */,
 				F980C491298AD9ED004C7C8F /* CKRRepository.swift */,
 			);
 			path = Template;
@@ -261,7 +231,6 @@
 				F911BDD72999406500B4E888 /* Brand */,
 				F911BDE2299967A800B4E888 /* Banner */,
 				F9D653D7299A869A00C796F6 /* Feed */,
-				F911BDCA299922B500B4E888 /* Fixture.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -347,6 +316,7 @@
 			children = (
 				F9D5C5512986C13A0026EEDC /* AppDelegate.swift */,
 				F959D5522986D57F006CAC08 /* AppNavigator.swift */,
+				F96927F9299BECA600FA063D /* AppAppearance.swift */,
 				F9D5C5532986C13A0026EEDC /* SceneDelegate.swift */,
 			);
 			path = Application;
@@ -358,8 +328,6 @@
 				F959D54D2986D4EA006CAC08 /* Template */,
 				F9D653CB299A6CFD00C796F6 /* Banner */,
 				F959D5482986D3FD006CAC08 /* Home */,
-				F959D55C2986DA90006CAC08 /* Style */,
-				F959D55D2986DA95006CAC08 /* Shop */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -378,6 +346,7 @@
 			children = (
 				F9D653C7299A690100C796F6 /* CKRPageController.swift */,
 				F9D653CF299A7C7700C796F6 /* CKRLinearPageController.swift */,
+				F96927F7299BDF8B00FA063D /* CKRGlenPageController.swift */,
 			);
 			path = CKRPageController;
 			sourceTree = "<group>";
@@ -461,8 +430,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F99B6A392989690000C0637A /* CKRCollectionController.storyboard in Resources */,
-				F959D5632986DABD006CAC08 /* StyleViewController.storyboard in Resources */,
-				F959D55F2986DAAB006CAC08 /* ShopViewController.storyboard in Resources */,
 				F9D653CD299A6D0800C796F6 /* BannerViewController.storyboard in Resources */,
 				F9D5C55E2986C13B0026EEDC /* LaunchScreen.storyboard in Resources */,
 				F9D5C55B2986C13B0026EEDC /* Assets.xcassets in Resources */,
@@ -480,12 +447,10 @@
 				F911BDD92999406F00B4E888 /* Brand.swift in Sources */,
 				F959D5572986D5F2006CAC08 /* CKRNavigationController.swift in Sources */,
 				F9D653C8299A690100C796F6 /* CKRPageController.swift in Sources */,
-				F99B6A30298964B600C0637A /* ReleaseViewController.swift in Sources */,
 				F9D5C5522986C13A0026EEDC /* AppDelegate.swift in Sources */,
 				F980C492298AD9ED004C7C8F /* CKRRepository.swift in Sources */,
 				F911BDC729980D9C00B4E888 /* PromotionDataSource.swift in Sources */,
 				F911BDDF2999477800B4E888 /* CKRSectionHeader.swift in Sources */,
-				F959D5612986DAB4006CAC08 /* ShopViewController.swift in Sources */,
 				F9D653CA299A6CEE00C796F6 /* BannerViewController.swift in Sources */,
 				F9D653DB299A86BE00C796F6 /* StylePicksFeedRepository.swift in Sources */,
 				F911BDD029992B0000B4E888 /* Product.swift in Sources */,
@@ -496,13 +461,11 @@
 				F9D5C5542986C13A0026EEDC /* SceneDelegate.swift in Sources */,
 				F911BDD229992B0600B4E888 /* DroppedProductRepository.swift in Sources */,
 				F959D54C2986D40E006CAC08 /* HomeViewController.swift in Sources */,
-				F99B6A322989671A00C0637A /* ExhibitionViewController.swift in Sources */,
 				F911BDE6299967D500B4E888 /* HomeBannerRepository.swift in Sources */,
 				F959D5512986D50D006CAC08 /* CKRCollectionController.swift in Sources */,
 				F911BDCD299927B900B4E888 /* ProductSection.swift in Sources */,
 				F911BDCB299922B500B4E888 /* Fixture.swift in Sources */,
 				F9D653D4299A82D600C796F6 /* PopularProductDataSource.swift in Sources */,
-				F959D5652986DAC4006CAC08 /* StyleViewController.swift in Sources */,
 				F9D653D6299A848500C796F6 /* StyleSection.swift in Sources */,
 				F980C488298AD704004C7C8F /* QuickButtonSection.swift in Sources */,
 				F959D54F2986D505006CAC08 /* CKRViewController.swift in Sources */,
@@ -515,10 +478,11 @@
 				F911BDDB2999408200B4E888 /* RecommendBrandRepository.swift in Sources */,
 				F911BDDD2999408B00B4E888 /* RecommendBrandDataSource.swift in Sources */,
 				F9D653D2299A82CD00C796F6 /* PopularProductRepository.swift in Sources */,
+				F96927FA299BECA600FA063D /* AppAppearance.swift in Sources */,
 				F911BDC929980DA700B4E888 /* Promotion.swift in Sources */,
-				F99B6A2A2989647500C0637A /* GenderViewController.swift in Sources */,
 				F9D653D0299A7C7700C796F6 /* CKRLinearPageController.swift in Sources */,
 				F911BDD62999378E00B4E888 /* String+.swift in Sources */,
+				F96927F8299BDF8B00FA063D /* CKRGlenPageController.swift in Sources */,
 				F99B6A5829898B3B00C0637A /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,16 +11,26 @@ struct AppNavigator {
     
     static func launch(from window: UIWindow?) {
         
-        let main = CKRTabBarController()
-        
-        main.setViewControllers([
+        window?.rootViewController =
+        CKRTabBarController([
             CKRNavigationController(
-                HomeViewController.default()
-            ),
-        ],animated: false)
+                CKRGlenPageController([
+                    HomeViewController.default().title("추천"),
+                    HomeViewController.default().title("남성"),
+                    HomeViewController.default().title("여성"),
+                    HomeViewController.default().title("브랜드")
+                ])
+            ).title("HOME"),
+        ])
         
-        window?.rootViewController = main
         window?.makeKeyAndVisible()
     }
     
+}
+
+fileprivate extension UIViewController {
+    func title(_ text: String) -> Self {
+        self.title = text
+        return self
+    }
 }

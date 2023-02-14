@@ -24,6 +24,7 @@ struct PopularProductFixtureDataSource: PopularProductDataSource {
                 )
             })
         )
+        .delay(.microseconds(Int.random(in: 0...500)), scheduler: MainScheduler.instance)
     }
     
 }

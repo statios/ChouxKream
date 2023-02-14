@@ -9,4 +9,9 @@ import UIKit
 
 class CKRTabBarController: UITabBarController {
     
+    convenience init(_ viewControllers: [UIViewController]) {
+        self.init()
+        self.setViewControllers(viewControllers, animated: true)
+    }
+    
 }

@@ -47,21 +47,6 @@ class CKRViewController: UIViewController {
         
     }
     
-    var needRefresh: Bool {
-        return true
-    }
-    
-    /// Call in viewDidLoad() and didTapRetryButton() if needRefresh is true.
-    func loadRefresh() {
-        
-    }
-    
-    private func loadRefreshIfNeeded() {
-        if needRefresh {
-            loadRefresh()
-        }
-    }
-    
     func attachContent(viewController: UIViewController, container: UIView) {
         
         guard !children.contains(viewController) else { return }
@@ -95,7 +80,3 @@ class CKRViewController: UIViewController {
     }
     
 }
-
-//extension UIViewController: CKRPageBarItem {
-//    
-//}

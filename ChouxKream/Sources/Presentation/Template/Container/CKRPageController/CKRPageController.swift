@@ -52,6 +52,11 @@ class CKRPageController: CKRViewController {
         
     }
     
+    func pageViewController(setViewController index: Int) {
+        guard index < viewControllers.count else { return }
+        pageController.setViewControllers([viewControllers[index]], direction: .forward, animated: true)
+    }
+    
 }
 
 extension CKRPageController: UIPageViewControllerDataSource {

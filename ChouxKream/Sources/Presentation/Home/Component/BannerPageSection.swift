@@ -81,7 +81,6 @@ class BannerPageCell: CKRAttributedCell<BannerPageItem> {
         pageController.view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         pageController.view.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         pageController.view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        pageController.view.backgroundColor = .random
         
         pageController.didMove(toParent: viewController)
         

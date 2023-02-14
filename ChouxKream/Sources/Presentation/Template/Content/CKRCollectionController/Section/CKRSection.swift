@@ -14,7 +14,7 @@ protocol CKRSection: Identifiable, Comparable where ID == String {
     
     var id: String { get }
     
-    var priority: CKRSectionPriority { get set }
+    var priority: CKRSectionPriority { get }
     
     var header: CKRSectionHeaderItem? { get }
     

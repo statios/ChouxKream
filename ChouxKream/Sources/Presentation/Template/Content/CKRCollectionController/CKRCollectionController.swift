@@ -97,17 +97,21 @@ class CKRCollectionController: CKRViewController {
             .subscribe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] section in
                 guard let self else { return }
+                self.sectionStore.removeAll(where: { $0.id == section.id })
                 self.sectionStore.append(section)
                 self.sectionStore.sort { pre, cur in
                     pre.priority.rawValue > cur.priority.rawValue
                 }
-            
-                self.reloadDataSource(animated: true)
+                self.setNeedReloadDataSource()
             })
             .disposed(by: disposeBag)
     }
     
-    func reloadDataSource(animated: Bool, completion: (() -> Void)? = nil) {
+    private var needReloadDataSource: Bool = true
+    
+    private var isRunningReload: Bool = false
+    
+    func reloadDataSource(completion: (() -> Void)? = nil) {
         
         var snapshot = NSDiffableDataSourceSnapshot<String, AnyHashable>()
         
@@ -117,13 +121,30 @@ class CKRCollectionController: CKRViewController {
             snapshot.appendItems(section.itemStore.map { AnyHashable($0) }, toSection: section.id)
         }
         
-        collectionViewDataSource.apply(snapshot, animatingDifferences: animated) {
+        isRunningReload = true
+        needReloadDataSource = false
+        
+        collectionViewDataSource.apply(snapshot, animatingDifferences: true) { [weak self] in
+            
+            self?.isRunningReload = false
+            
+            if self?.needReloadDataSource == true {
+                self?.reloadDataSource()
+            }
+            
             completion?()
         }
     }
     
     func prepareLayoutConfgiuration(_ configuration: UICollectionViewCompositionalLayoutConfiguration) {
         configuration.interSectionSpacing = 32
+    }
+    
+    func setNeedReloadDataSource() {
+        needReloadDataSource = true
+        if !isRunningReload {
+            reloadDataSource()
+        }
     }
     
 }
