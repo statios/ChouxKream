@@ -54,12 +54,14 @@ class QuickButtonCell: CKRAttributedCell<QuickButtonItem> {
         
         titleLabel.text = item.title
         imageView.backgroundColor = item.color
-        
-        contentView.layoutIfNeeded()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         
         imageView.layer.cornerRadius = traitCollection.horizontalSizeClass == .compact
-        ? imageView.frame.height / 2
-        : min(12, imageView.frame.height/2)
+        ? frame.width / 2
+        : min(12, frame.width/2)
     }
     
 }
